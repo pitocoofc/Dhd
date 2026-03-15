@@ -576,5 +576,10 @@ elements.darkModeToggle.addEventListener("change", (e) => {
   localStorage.setItem("darkMode", state.darkMode.toString());
 });
 
+botaoAdmin.addEventListener('click', function() {
+    mult = 759;
+    console.log(minhaVariavel); // Exibe o novo valor no console
+});
+        
 // Initialize the game
 initGame();

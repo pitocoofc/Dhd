@@ -576,10 +576,20 @@ elements.darkModeToggle.addEventListener("change", (e) => {
   localStorage.setItem("darkMode", state.darkMode.toString());
 });
 
-botaoAdmin.addEventListener('click', function() {
-    mult = 759;
-    console.log(minhaVariavel); // Exibe o novo valor no console
-});
+if (elements.botaoAdmin) {
+    elements.botaoAdmin.addEventListener('click', function() {
+        // Altera o multiplicador dentro do objeto de estado
+        state.mult = 759;
+        
+        // Dá um bônus de dinheiro para testar
+        state.bucks += 1000000;
+        
+        // Atualiza a interface imediatamente para mostrar a mudança
+        updateDisplay();
+        
+        console.log("Modo Admin Ativado: Multiplicador alterado para " + state.mult);
+    });
+}
         
 // Initialize the game
 initGame();
